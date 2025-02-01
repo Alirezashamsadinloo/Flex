@@ -1,65 +1,26 @@
-Installer Tool
-A Python-based tool for creating .bat installers, automatically installing .exe files, and running processes with administrative privileges. This project provides a command-line interface (CLI) to manage installations efficiently and with additional features like backup, logging, and progress tracking.
+# Python-based Installer Generator
 
-Features
-Create Installer.bat: Generate .bat installer scripts to run .exe files automatically.
-Automatic .exe Installation: Install multiple .exe files simultaneously with progress tracking.
-Run with Administrative Privileges: Execute installation with elevated permissions for system-level applications.
-Backup Files: Backup files before starting the installation to avoid data loss.
-Progress Tracking: Display progress bar while installing files and monitor installation status.
-Logging: Keep track of all installation processes and errors in a log file for future review.
-Prerequisites
-Before using this tool, make sure you have Python 3.x installed. You will also need to install some required dependencies.
+A powerful and flexible Python tool to generate and manage custom installer batch files, automate installations, and handle exe file installations efficiently. This project supports advanced installation options, parallel installations, automatic setup creation, and backup management.
 
-Installing Dependencies
-To install the required dependencies, run the following command:
+## Features
+- **Create Installer.bat with Advanced Options**: Generate custom installer batch files with multiple configuration options.
+- **Automatic Installer**: Automatically install exe files without user interaction.
+- **Parallel Installations**: Install multiple exe files at once.
+- **Backup Management**: Automatically back up existing files before installation.
+- **Log Generation**: Track installation progress and issues with logs.
+- **Admin Privileges**: Run the installer with elevated permissions for system-level apps.
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-This will install the necessary libraries, including:
+## Installation
 
-colorama - for colored terminal output.
-tqdm - for displaying progress bars during installation.
-How to Use
-Running the Program
-Clone the repository or download the files.
+To get started with this tool, follow the installation instructions below.
 
-Install the dependencies using the command above.
+### Prerequisites
 
-Run the program with:
+- Python 3.x (Tested with Python 3.7+)
+- Required Python libraries are listed in `requirements.txt`.
 
-bash
-Copy
-Edit
-python main.py
-Main Menu Options
-Upon running the program, the following options will be available:
+### Step 1: Clone the Repository
 
-Create Installer.bat with advanced options: Create a .bat file for installing .exe files with custom settings.
-Create Installer.bat and Install Automatically: Generate an installer .bat file and run it automatically.
-Auto Install .exe files: Automatically install .exe files from a selected folder.
-Exit: Exit the program.
-Run with Admin Privileges (For system-level apps): Run the installation processes with elevated privileges (administrator rights).
-Backup Files Before Installation
-The tool will prompt for a backup folder before installation. All the files in the source folder will be copied to the backup folder to ensure no data is lost during the installation process.
-
-Viewing Logs
-A log file, installer_log.txt, will be created to track the installation process. This file contains information about successful installations, errors, and progress updates.
-
-Example
-Select a folder containing .exe files.
-Choose a destination folder to save the installer script.
-Optionally, select a backup folder before starting the installation.
-After the installation, the process will show the status in the terminal and create an installer .bat file.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Contributing
-Contributions are welcome! If you would like to improve this tool or fix bugs, please fork the repository, create a branch, and submit a pull request.
-
-Contact
-For more information, contact the project maintainer:
-
-Alirezashamsadinloo
+```bash
+git clone https://github.com/alirezashamsadinloo/Flex.git
+cd Flex
