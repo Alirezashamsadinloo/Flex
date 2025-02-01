@@ -1,0 +1,59 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+# .github/dependabot.yml
+
+version: 2
+updates:
+  - package-ecosystem: "pip" # استفاده از pip برای Python
+    directory: "/" # دایرکتوری که فایل requirements.txt قرار دارد
+    schedule:
+      interval: "weekly" # به‌روزرسانی هفتگی
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    versioning-strategy: "increase" # استفاده از نسخه‌های بالاتر (major, minor)
+    ignore:
+      - dependency-name: "flask" # فرض کنید می‌خواهید به‌روزرسانی برای فلکس را نادیده بگیرید
+        versions: ["<2.0.0"] # نسخه‌های قبل از 2.0 را نادیده بگیرید
+    security-updates-only: true # فقط به‌روزرسانی‌های امنیتی انجام شود
+    automerged: true # به‌طور خودکار pull request را برای به‌روزرسانی‌های وابستگی‌ها ترکیب می‌کند
+    allow:
+      - dependency-name: "requests" # اجازه به‌روزرسانی برای بسته خاص
+        update-types: ["version-update:semver-major"] # فقط به‌روزرسانی‌های major
+
+  - package-ecosystem: "npm" # استفاده از npm برای Node.js
+    directory: "/frontend" # فرض بر این است که پوشه frontend برای Node.js است
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    versioning-strategy: "auto" # به‌روزرسانی نسخه به صورت خودکار
+    security-updates-only: true # فقط به‌روزرسانی‌های امنیتی
+    automerged: true
+    ignore:
+      - dependency-name: "express" # فرض کنید می‌خواهید به‌روزرسانی برای express را نادیده بگیرید
+        versions: ["<4.0.0"] # نسخه‌های قبل از 4.0 را نادیده بگیرید
+    allow:
+      - dependency-name: "lodash" # فقط به‌روزرسانی‌های minor برای lodash
+        update-types: ["version-update:semver-minor"]
+
+  - package-ecosystem: "maven" # برای Java استفاده از Maven
+    directory: "/java" # دایرکتوری مخصوص Java
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    versioning-strategy: "increase" # افزایش نسخه‌ها
+    automerged: true
+
+# تنظیمات عمومی
+ignore:
+  - dependency-name: "django" # بسته django همیشه به‌روزرسانی نمی‌شود
+    versions: ["<3.0.0"]
+    update-types: ["version-update:semver-patch"]
+
