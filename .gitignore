@@ -1,0 +1,46 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# logs
+logs/
+*.log
+
+# Configuration files
+*.cfg
+*.ini
+
+# Test output
+*.coverage
+nosetests.xml
+coverage.xml
+*.cover
+*.hypothesis/
+
+# Pipenv
+Pipfile.lock
+
+# pytest cache
+.cache/

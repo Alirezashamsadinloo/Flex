@@ -1,0 +1,6 @@
+colorama
+tqdm
+subprocess
+threading
+tkinter
+logging
