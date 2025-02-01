@@ -24,3 +24,9 @@ To get started with this tool, follow the installation instructions below.
 ```bash
 git clone https://github.com/alirezashamsadinloo/Flex.git
 cd Flex
+
+### Step 2: Clone the Repository
+
+```bash
+pip install -r requirements.txt
+
